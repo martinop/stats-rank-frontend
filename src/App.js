@@ -98,17 +98,20 @@ function App() {
             </div>
           )}
           {positions.playOff && (
-            <div>
+            <div className="flex items-center">
+              <img src="/playoff.png" alt="Tercero"  className="h-6 mr-2"/>
               <h2 className="text-3xl">{positions.playOff}</h2>
             </div>
           )}
           {positions.firstDescend && (
-            <div>
+            <div className="flex items-center">
+              <img src="/descend.png" alt="Tercero"  className="h-6 mr-2"/>
               <h2 className="text-3xl">{positions.firstDescend}</h2>
             </div>
           )}
           {positions.secondDescend && (
-            <div>
+            <div className="flex items-center">
+              <img src="/descend.png" alt="Tercero"  className="h-6 mr-2"/>
               <h2 className="text-3xl">{positions.secondDescend}</h2>
             </div>
           )}
