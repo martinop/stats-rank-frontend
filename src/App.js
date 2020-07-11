@@ -112,7 +112,7 @@ function App() {
               <h2 className="text-3xl">{positions.secondDescend}</h2>
             </div>
           )}
-          <h2 className="follow-us text-yellow-400">@fmsstats</h2>
+          <h2 className="follow-us text-yellow-400">@fmsstatsof</h2>
         </div>
         <button onClick={onDownload} className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
           Descargar
