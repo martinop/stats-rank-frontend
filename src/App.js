@@ -20,7 +20,7 @@ function App() {
   }
 
   function onDownload() {
-    html2canvas(document.getElementById('capture'), { width: 400, height: 400, useCORS: true, scrollX: 0, scrollY: -window.scrollY })
+    html2canvas(document.getElementById('capture'), { width: 500, height: 500, useCORS: true, scrollX: 0, scrollY: -window.scrollY })
       .then(canvas => {
         try {
           const link = document.createElement('a');
@@ -32,6 +32,12 @@ function App() {
             document.body.removeChild(link);
           } else {
             window.open(canvas.toDataURL());
+          }
+          if(window.ga) {
+            window.ga('send', 'event', {
+              eventAction: 'download',
+              eventLabel: 'Descarga Prediccoin'
+            });
           }
         } catch(e) {
           console.log(e)
@@ -46,6 +52,7 @@ function App() {
       return [current, ...prev]
     }, [])
     .map(e => ({ label: e.name, value: e.name }))
+
   return (
     <div>
       <div className="block md:hidden text-center text-white bg-red-700 py-4 px-4 fixed w-full z-10 top-0 leading-none">
