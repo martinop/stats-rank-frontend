@@ -20,22 +20,15 @@ function App() {
   }
 
   function onDownload() {
-    html2canvas(document.getElementById('capture'), { useCORS: true })
+    html2canvas(document.getElementById('capture'), { useCORS: true, scrollX: 0, scrollY: -window.scrollY })
       .then(canvas => {
         try {
           const link = document.createElement('a');
-          console.log(canvas)
           if (typeof link.download === 'string') {
             link.href = canvas.toDataURL();
             link.download = "prediccion.png";
-  
-            //Firefox requires the link to be in the body
             document.body.appendChild(link);
-  
-            //simulate click
             link.click();
-  
-            //remove the link when done
             document.body.removeChild(link);
           } else {
             window.open(canvas.toDataURL());
@@ -45,9 +38,13 @@ function App() {
         }
       })
   }
-  console.log(positions);
 
   const spainParticipants = _spainParticipants
+    .reduce((prev, current) => {
+      const values = Object.values(positions);
+      if(values.includes(current.name)) return [...prev, current]
+      return [current, ...prev]
+    }, [])
     .map(e => ({ label: e.name, value: e.name }))
   return (
     <div className="p-12 flex justify-center">
