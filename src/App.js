@@ -20,7 +20,7 @@ function App() {
   }
 
   function onDownload() {
-    html2canvas(document.getElementById('capture'), { useCORS: true, scrollX: 0, scrollY: -window.scrollY })
+    html2canvas(document.getElementById('capture'), { width: 400, height: 400, useCORS: true, scrollX: 0, scrollY: -window.scrollY })
       .then(canvas => {
         try {
           const link = document.createElement('a');
@@ -47,8 +47,8 @@ function App() {
     }, [])
     .map(e => ({ label: e.name, value: e.name }))
   return (
-    <div className="p-12 flex justify-center">
-      <div className="w-2/5 flex flex-col bg-gray-800 rounded-md p-4">
+    <div className="p-12 flex flex-col-reverse md:flex-row justify-center">
+      <div className="w-full md:w-2/5 mb-8 md:mb-0 flex flex-col bg-gray-800 rounded-md p-4">
         <h2 className="text-white">Competición</h2>
         <Dropdown options={["España"]} onChange={({ value }) => setCompetition(value)} placeholder="Competición" value={competition} />
         <h2 className="text-white mt-4">Tu @:</h2>
@@ -117,7 +117,7 @@ function App() {
           )}
           <h2 className="follow-us text-yellow-400">@fmsstatsof</h2>
         </div>
-        <button onClick={onDownload} className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        <button onClick={onDownload} className="mt-4 mb-8 md:mb-0 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
           Descargar
         </button>
       </div>
