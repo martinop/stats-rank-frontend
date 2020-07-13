@@ -24,4 +24,17 @@ export const peru = [
 	{name: 'Litzen'},
 ]
 
-export const participants = { españa, peru }
+export const chile = [
+	{name: 'Teorema'},
+	{name: 'Acertijo'},
+	{name: 'Nitro'},
+	{name: 'Ricto'},
+	{name: 'El Menor'},
+	{name: 'Tom Crowley'},
+	{name: 'Pepe Grillo'},
+	{name: 'Joqerr'},
+	{name: 'Esezeta'},
+	{name: 'Jokker'},
+]
+
+export const participants = { españa, chile, peru }
