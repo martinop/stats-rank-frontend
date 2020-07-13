@@ -1,4 +1,4 @@
-export const spain = [
+export const españa = [
 	{name: 'Blon'},
 	{name: 'Bnet'},
 	{name: 'Errece'},
@@ -10,3 +10,18 @@ export const spain = [
 	{name: 'Khan'},
 	{name: 'Zasko'},
 ]
+
+export const peru = [
+	{name: 'Jaze'},
+	{name: 'Nekroos'},
+	{name: 'Jota'},
+	{name: 'Stick'},
+	{name: 'Strike'},
+	{name: 'Ramset'},
+	{name: 'New Era'},
+	{name: 'Choque'},
+	{name: 'Skill'},
+	{name: 'Litzen'},
+]
+
+export const participants = { españa, peru }
