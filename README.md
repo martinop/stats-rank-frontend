@@ -1,4 +1,10 @@
+
+Simple Web App to generate an image with your prediction of the positions in the FMS (Freestyle Master Series).
+
+DEMO: https://rank.fmsstats.com/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 
 ## Available Scripts
 
