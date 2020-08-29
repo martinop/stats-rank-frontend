@@ -53,7 +53,7 @@ function App() {
     }, [])
     .map(e => ({ label: e.name, value: e.name }))
 
-  const competitions = [{ label: "España", value: "españa" }, { label: "Peru", value: "peru" }, { label: "Chile", value: "chile" }]
+  const competitions = [{ label: "España", value: "españa" }, { label: "Argentina", value: "argentina" }, { label: "Peru", value: "peru" }, { label: "Chile", value: "chile" }]
   return (
     <div>
       <div className="block md:hidden text-center text-white bg-red-700 py-4 px-4 fixed w-full z-10 top-0 leading-none">
