@@ -37,4 +37,18 @@ export const chile = [
 	{name: 'Jokker'},
 ]
 
-export const participants = { españa, chile, peru }
+
+export const argentina = [
+	{name: 'Papo'},
+	{name: 'Dtoke'},
+	{name: 'Stuart'},
+	{name: 'Mecha'},
+	{name: 'MKS'},
+	{name: 'Cacha'},
+	{name: 'Nacho'},
+	{name: 'Klan'},
+	{name: 'Wolf'},
+	{name: 'Sub'},
+]
+
+export const participants = { españa, chile, peru, argentina }

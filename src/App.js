@@ -10,7 +10,7 @@ const initialState = { first: '', second: '', third: '', playOff: '', firstDesce
 
 function App() {
   const [positions, setPositions] = useState(initialState)
-  const [competition, setCompetition] = useState('peru');
+  const [competition, setCompetition] = useState('argentina');
   const [username, setUsername] = useState('');
 
   function onChangeParticipant(field) {
