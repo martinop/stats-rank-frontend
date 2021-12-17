@@ -10,7 +10,7 @@ const initialState = { first: '', second: '', third: '', playOff: '', firstDesce
 
 function App() {
   const [positions, setPositions] = useState(initialState)
-  const [competition, setCompetition] = useState('argentina');
+  const [competition] = useState('españa');
   const [username, setUsername] = useState('');
 
   function onChangeParticipant(field) {
@@ -53,7 +53,7 @@ function App() {
     }, [])
     .map(e => ({ label: e.name, value: e.name }))
 
-  const competitions = [{ label: "España", value: "españa" }, { label: "Argentina", value: "argentina" }, { label: "Peru", value: "peru" }, { label: "Chile", value: "chile" }]
+  // const competitions = [{ label: "España", value: "españa" }, { label: "Argentina", value: "argentina" }, { label: "Peru", value: "peru" }, { label: "Chile", value: "chile" }]
   return (
     <div>
       <div className="block md:hidden text-center text-white bg-red-700 py-4 px-4 fixed w-full z-10 top-0 leading-none">
@@ -62,7 +62,7 @@ function App() {
       <div className="p-12 flex flex-col-reverse md:flex-row justify-center">
         <div className="w-full md:w-2/5 mb-8 md:mb-0 flex flex-col bg-gray-800 rounded-md p-4">
           <h2 className="text-white">Competición</h2>
-          <Dropdown options={competitions} onChange={({ value }) => [setCompetition(value), setPositions(initialState)]} placeholder="Competición" value={competition} />
+          {/* <Dropdown options={competitions} onChange={({ value }) => [setCompetition(value), setPositions(initialState)]} placeholder="Competición" value={competition} /> */}
           <h2 className="text-white mt-4">Tu @:</h2>
           <input value={username} onChange={e => setUsername(e.target.value)} type="text" />
           <h2 className="text-white mt-4">1er Lugar:</h2>

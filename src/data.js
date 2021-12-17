@@ -1,13 +1,15 @@
 export const españa = [
 	{name: 'Blon'},
-	{name: 'Bnet'},
-	{name: 'Errece'},
+	{name: 'Skone'},
+	{name: 'Chuty'},
+	{name: 'Socas'},
 	{name: 'Gazir'},
 	{name: 'Mnak'},
 	{name: 'Mr Ego'},
 	{name: 'Sweet Pain'},
 	{name: 'Tirpa'},
-	{name: 'Khan'},
+	{name: 'Elekipo'},
+	{name: 'Hander'},
 	{name: 'Zasko'},
 ]
 
